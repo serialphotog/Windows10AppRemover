@@ -26,6 +26,7 @@ namespace Windows10AppRemover
         private const String Calculator = @"Microsoft.WindowsCalculator";
         private const String Camera = @"Microsoft.WindowsCamera";
         private const String ContactSupport = @"Microsoft.ContactSupport";
+        private const String Messaging = @"Microsoft.Messaging";
 
         // Installed app flags
         private bool hasGetStarted = false;
@@ -38,6 +39,7 @@ namespace Windows10AppRemover
         private bool hasCalculator = false;
         private bool hasCamera = false;
         private bool hasContactSupport = false;
+        private bool hasMessaging = false;
 
         public MainForm()
         {
@@ -77,6 +79,8 @@ namespace Windows10AppRemover
                 this.btnDeleteCamera.Enabled = true;
             if (hasContactSupport)
                 this.btnDeleteContactSupport.Enabled = true;
+            if (hasMessaging)
+                this.btnDeleteMessaging.Enabled = true;
 
             this.lblCurrentOperation.Text = "";
         }
@@ -145,6 +149,12 @@ namespace Windows10AppRemover
             {
                 Debug.WriteLine("Detected " + ContactSupport + " is installed");
                 this.hasCamera = true;
+            }
+            // Test for Messaging app
+            if (appHandler.GetIsAppInstalled(Messaging))
+            {
+                Debug.WriteLine("Detected " + Messaging + " is installed");
+                this.hasMessaging = true;
             }
         }
 
@@ -220,6 +230,12 @@ namespace Windows10AppRemover
         private void btnDeleteContactSupport_Click(object sender, EventArgs e)
         {
             DoDeleteApp(ContactSupport, sender);
+        }
+
+        // Delete Messaging app
+        private void btnDeleteGrooveMusic_Click(object sender, EventArgs e)
+        {
+            DoDeleteApp(Messaging, sender);
         }
     }
 }

@@ -40,6 +40,7 @@
             this.lblCurrentOperation = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnDeleteCamera = new System.Windows.Forms.Button();
             this.btnDeleteContactSupport = new System.Windows.Forms.Button();
+            this.btnDeleteMessaging = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -169,11 +170,23 @@
             this.btnDeleteContactSupport.UseVisualStyleBackColor = true;
             this.btnDeleteContactSupport.Click += new System.EventHandler(this.btnDeleteContactSupport_Click);
             // 
+            // btnDeleteMessaging
+            // 
+            this.btnDeleteMessaging.Enabled = false;
+            this.btnDeleteMessaging.Location = new System.Drawing.Point(344, 144);
+            this.btnDeleteMessaging.Name = "btnDeleteMessaging";
+            this.btnDeleteMessaging.Size = new System.Drawing.Size(160, 60);
+            this.btnDeleteMessaging.TabIndex = 11;
+            this.btnDeleteMessaging.Text = "Delete Messaging";
+            this.btnDeleteMessaging.UseVisualStyleBackColor = true;
+            this.btnDeleteMessaging.Click += new System.EventHandler(this.btnDeleteGrooveMusic_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 392);
+            this.Controls.Add(this.btnDeleteMessaging);
             this.Controls.Add(this.btnDeleteContactSupport);
             this.Controls.Add(this.btnDeleteCamera);
             this.Controls.Add(this.statusStrip);
@@ -208,6 +221,7 @@
         private System.Windows.Forms.ToolStripStatusLabel lblCurrentOperation;
         private System.Windows.Forms.Button btnDeleteCamera;
         private System.Windows.Forms.Button btnDeleteContactSupport;
+        private System.Windows.Forms.Button btnDeleteMessaging;
     }
 }
 
