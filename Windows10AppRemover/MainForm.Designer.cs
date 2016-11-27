@@ -42,6 +42,7 @@
             this.btnDeleteContactSupport = new System.Windows.Forms.Button();
             this.btnDeleteMessaging = new System.Windows.Forms.Button();
             this.btnDeleteNews = new System.Windows.Forms.Button();
+            this.btnDeleteOneNote = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,11 +195,24 @@
             this.btnDeleteNews.UseVisualStyleBackColor = true;
             this.btnDeleteNews.Click += new System.EventHandler(this.btnDeleteNews_Click);
             // 
+            // btnDeleteOneNote
+            // 
+            this.btnDeleteOneNote.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnDeleteOneNote.Enabled = false;
+            this.btnDeleteOneNote.Location = new System.Drawing.Point(12, 210);
+            this.btnDeleteOneNote.Name = "btnDeleteOneNote";
+            this.btnDeleteOneNote.Size = new System.Drawing.Size(160, 60);
+            this.btnDeleteOneNote.TabIndex = 13;
+            this.btnDeleteOneNote.Text = "Delete OneNote";
+            this.btnDeleteOneNote.UseVisualStyleBackColor = true;
+            this.btnDeleteOneNote.Click += new System.EventHandler(this.btnDeleteOneNote_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 392);
+            this.Controls.Add(this.btnDeleteOneNote);
             this.Controls.Add(this.btnDeleteNews);
             this.Controls.Add(this.btnDeleteMessaging);
             this.Controls.Add(this.btnDeleteContactSupport);
@@ -237,6 +251,7 @@
         private System.Windows.Forms.Button btnDeleteContactSupport;
         private System.Windows.Forms.Button btnDeleteMessaging;
         private System.Windows.Forms.Button btnDeleteNews;
+        private System.Windows.Forms.Button btnDeleteOneNote;
     }
 }
 

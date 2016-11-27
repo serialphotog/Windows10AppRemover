@@ -28,6 +28,7 @@ namespace Windows10AppRemover
         private const String ContactSupport = @"Microsoft.ContactSupport";
         private const String Messaging = @"Microsoft.Messaging";
         private const String News = @"Microsoft.BingNews";
+        private const String OneNote = @"Microsoft.Office.OneNote";
 
         // Installed app flags
         private bool hasGetStarted = false;
@@ -42,6 +43,7 @@ namespace Windows10AppRemover
         private bool hasContactSupport = false;
         private bool hasMessaging = false;
         private bool hasNews = false;
+        private bool hasOneNote = false;
 
         public MainForm()
         {
@@ -85,6 +87,8 @@ namespace Windows10AppRemover
                 this.btnDeleteMessaging.Enabled = true;
             if (hasNews)
                 this.btnDeleteNews.Enabled = true;
+            if (hasOneNote)
+                this.btnDeleteOneNote.Enabled = true;
 
             this.lblCurrentOperation.Text = "";
         }
@@ -165,6 +169,12 @@ namespace Windows10AppRemover
             {
                 Debug.WriteLine("Detected " + News + " is installed");
                 this.hasNews = true;
+            }
+            // Test for OneNote app
+            if (appHandler.GetIsAppInstalled(OneNote))
+            {
+                Debug.WriteLine("Detected " + OneNote + " is installed");
+                this.hasOneNote = true;
             }
         }
 
@@ -252,6 +262,12 @@ namespace Windows10AppRemover
         private void btnDeleteNews_Click(object sender, EventArgs e)
         {
             DoDeleteApp(News, sender);
+        }
+
+        // Delete OneNote app
+        private void btnDeleteOneNote_Click(object sender, EventArgs e)
+        {
+            DoDeleteApp(OneNote, sender);
         }
     }
 }
