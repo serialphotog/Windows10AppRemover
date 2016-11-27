@@ -45,6 +45,7 @@
             this.btnDeleteOneNote = new System.Windows.Forms.Button();
             this.btnDeleteSkype = new System.Windows.Forms.Button();
             this.btnDeleteVoiceRecorder = new System.Windows.Forms.Button();
+            this.btnDeleteWeather = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -233,11 +234,24 @@
             this.btnDeleteVoiceRecorder.UseVisualStyleBackColor = true;
             this.btnDeleteVoiceRecorder.Click += new System.EventHandler(this.btnDeleteVoiceRecorder_Click);
             // 
+            // btnDeleteWeather
+            // 
+            this.btnDeleteWeather.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnDeleteWeather.Enabled = false;
+            this.btnDeleteWeather.Location = new System.Drawing.Point(510, 210);
+            this.btnDeleteWeather.Name = "btnDeleteWeather";
+            this.btnDeleteWeather.Size = new System.Drawing.Size(160, 60);
+            this.btnDeleteWeather.TabIndex = 16;
+            this.btnDeleteWeather.Text = "Delete Weather";
+            this.btnDeleteWeather.UseVisualStyleBackColor = true;
+            this.btnDeleteWeather.Click += new System.EventHandler(this.btnDeleteWeather_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 392);
+            this.Controls.Add(this.btnDeleteWeather);
             this.Controls.Add(this.btnDeleteVoiceRecorder);
             this.Controls.Add(this.btnDeleteSkype);
             this.Controls.Add(this.btnDeleteOneNote);
@@ -282,6 +296,7 @@
         private System.Windows.Forms.Button btnDeleteOneNote;
         private System.Windows.Forms.Button btnDeleteSkype;
         private System.Windows.Forms.Button btnDeleteVoiceRecorder;
+        private System.Windows.Forms.Button btnDeleteWeather;
     }
 }
 
