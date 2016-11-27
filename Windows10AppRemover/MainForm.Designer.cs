@@ -47,6 +47,7 @@
             this.btnDeleteVoiceRecorder = new System.Windows.Forms.Button();
             this.btnDeleteWeather = new System.Windows.Forms.Button();
             this.btnDeleteXbox = new System.Windows.Forms.Button();
+            this.btnDeleteMailCalendar = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -260,11 +261,24 @@
             this.btnDeleteXbox.UseVisualStyleBackColor = true;
             this.btnDeleteXbox.Click += new System.EventHandler(this.btnDeleteXbox_Click);
             // 
+            // btnDeleteMailCalendar
+            // 
+            this.btnDeleteMailCalendar.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnDeleteMailCalendar.Enabled = false;
+            this.btnDeleteMailCalendar.Location = new System.Drawing.Point(178, 276);
+            this.btnDeleteMailCalendar.Name = "btnDeleteMailCalendar";
+            this.btnDeleteMailCalendar.Size = new System.Drawing.Size(160, 60);
+            this.btnDeleteMailCalendar.TabIndex = 18;
+            this.btnDeleteMailCalendar.Text = "Delete Mail and Calendar";
+            this.btnDeleteMailCalendar.UseVisualStyleBackColor = true;
+            this.btnDeleteMailCalendar.Click += new System.EventHandler(this.btnDeleteMailCalendar_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 372);
+            this.Controls.Add(this.btnDeleteMailCalendar);
             this.Controls.Add(this.btnDeleteXbox);
             this.Controls.Add(this.btnDeleteWeather);
             this.Controls.Add(this.btnDeleteVoiceRecorder);
@@ -314,6 +328,7 @@
         private System.Windows.Forms.Button btnDeleteVoiceRecorder;
         private System.Windows.Forms.Button btnDeleteWeather;
         private System.Windows.Forms.Button btnDeleteXbox;
+        private System.Windows.Forms.Button btnDeleteMailCalendar;
     }
 }
 

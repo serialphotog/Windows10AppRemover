@@ -40,6 +40,7 @@ namespace Windows10AppRemover
         private const String VoiceRecorder = @"Microsoft.WindowsSoundRecorder";
         private const String Weather = @"Microsoft.BingWeather";
         private const String Xbox = @"Microsoft.XboxApp";
+        private const String MailCal = @"microsoft.windowscommunicationsapps";
 
         // Installed app flags
         private bool hasGetStarted = false;
@@ -59,6 +60,7 @@ namespace Windows10AppRemover
         private bool hasVoiceRecorder = false;
         private bool hasWeather = false;
         private bool hasXbox = false;
+        private bool hasMailCal = false;
 
         public MainForm()
         {
@@ -112,6 +114,8 @@ namespace Windows10AppRemover
                 this.btnDeleteWeather.Enabled = true;
             if (hasXbox)
                 this.btnDeleteXbox.Enabled = true;
+            if (hasMailCal)
+                this.btnDeleteMailCalendar.Enabled = true;
 
             this.lblCurrentOperation.Text = "";
         }
@@ -222,6 +226,12 @@ namespace Windows10AppRemover
             {
                 Debug.WriteLine("Detected " + Xbox + " is installed");
                 this.hasXbox = true;
+            }
+            // Test for mail and calendar app
+            if (appHandler.GetIsAppInstalled(MailCal))
+            {
+                Debug.WriteLine("Detected " + MailCal + " is installed");
+                this.hasMailCal = true;
             }
         }
 
@@ -339,6 +349,12 @@ namespace Windows10AppRemover
         private void btnDeleteXbox_Click(object sender, EventArgs e)
         {
             DoDeleteApp(Xbox, sender);
+        }
+
+        // Delete mail and calendar apps
+        private void btnDeleteMailCalendar_Click(object sender, EventArgs e)
+        {
+            DoDeleteApp(MailCal, sender);
         }
     }
 }
