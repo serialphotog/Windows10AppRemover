@@ -44,6 +44,7 @@
             this.btnDeleteNews = new System.Windows.Forms.Button();
             this.btnDeleteOneNote = new System.Windows.Forms.Button();
             this.btnDeleteSkype = new System.Windows.Forms.Button();
+            this.btnDeleteVoiceRecorder = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -220,11 +221,24 @@
             this.btnDeleteSkype.UseVisualStyleBackColor = true;
             this.btnDeleteSkype.Click += new System.EventHandler(this.btnDeleteSkype_Click);
             // 
+            // btnDeleteVoiceRecorder
+            // 
+            this.btnDeleteVoiceRecorder.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnDeleteVoiceRecorder.Enabled = false;
+            this.btnDeleteVoiceRecorder.Location = new System.Drawing.Point(344, 210);
+            this.btnDeleteVoiceRecorder.Name = "btnDeleteVoiceRecorder";
+            this.btnDeleteVoiceRecorder.Size = new System.Drawing.Size(160, 60);
+            this.btnDeleteVoiceRecorder.TabIndex = 15;
+            this.btnDeleteVoiceRecorder.Text = "Delete Voice Recorder";
+            this.btnDeleteVoiceRecorder.UseVisualStyleBackColor = true;
+            this.btnDeleteVoiceRecorder.Click += new System.EventHandler(this.btnDeleteVoiceRecorder_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 392);
+            this.Controls.Add(this.btnDeleteVoiceRecorder);
             this.Controls.Add(this.btnDeleteSkype);
             this.Controls.Add(this.btnDeleteOneNote);
             this.Controls.Add(this.btnDeleteNews);
@@ -267,6 +281,7 @@
         private System.Windows.Forms.Button btnDeleteNews;
         private System.Windows.Forms.Button btnDeleteOneNote;
         private System.Windows.Forms.Button btnDeleteSkype;
+        private System.Windows.Forms.Button btnDeleteVoiceRecorder;
     }
 }
 
