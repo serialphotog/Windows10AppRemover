@@ -1,7 +1,7 @@
 # Windows 10 App Remover
 If you've used Windows 10 you know that it comes loaded with all kinds of "modern" applications that can be rather bothersome and difficult to remove. This app solves that problem by making it easy to remove those pesky apps.
 
-[screenshot]: https://github.com/serialphotog/Windows10AppRemover/blob/master/Screenshot.PNG?raw=true "Screenshot"
+![Screenshot](https://github.com/serialphotog/Windows10AppRemover/blob/master/Screenshot.PNG)
 
 # Get It
 You can download Windows 10 App Remover from the [Releases Page](https://github.com/serialphotog/Windows10AppRemover/releases).
