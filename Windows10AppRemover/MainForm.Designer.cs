@@ -43,6 +43,7 @@
             this.btnDeleteMessaging = new System.Windows.Forms.Button();
             this.btnDeleteNews = new System.Windows.Forms.Button();
             this.btnDeleteOneNote = new System.Windows.Forms.Button();
+            this.btnDeleteSkype = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -207,11 +208,24 @@
             this.btnDeleteOneNote.UseVisualStyleBackColor = true;
             this.btnDeleteOneNote.Click += new System.EventHandler(this.btnDeleteOneNote_Click);
             // 
+            // btnDeleteSkype
+            // 
+            this.btnDeleteSkype.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnDeleteSkype.Enabled = false;
+            this.btnDeleteSkype.Location = new System.Drawing.Point(178, 210);
+            this.btnDeleteSkype.Name = "btnDeleteSkype";
+            this.btnDeleteSkype.Size = new System.Drawing.Size(160, 60);
+            this.btnDeleteSkype.TabIndex = 14;
+            this.btnDeleteSkype.Text = "Delete Skype";
+            this.btnDeleteSkype.UseVisualStyleBackColor = true;
+            this.btnDeleteSkype.Click += new System.EventHandler(this.btnDeleteSkype_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 392);
+            this.Controls.Add(this.btnDeleteSkype);
             this.Controls.Add(this.btnDeleteOneNote);
             this.Controls.Add(this.btnDeleteNews);
             this.Controls.Add(this.btnDeleteMessaging);
@@ -252,6 +266,7 @@
         private System.Windows.Forms.Button btnDeleteMessaging;
         private System.Windows.Forms.Button btnDeleteNews;
         private System.Windows.Forms.Button btnDeleteOneNote;
+        private System.Windows.Forms.Button btnDeleteSkype;
     }
 }
 
