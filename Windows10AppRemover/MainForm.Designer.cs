@@ -48,6 +48,7 @@
             this.btnDeleteWeather = new System.Windows.Forms.Button();
             this.btnDeleteXbox = new System.Windows.Forms.Button();
             this.btnDeleteMailCalendar = new System.Windows.Forms.Button();
+            this.btnDeleteZune = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -273,11 +274,24 @@
             this.btnDeleteMailCalendar.UseVisualStyleBackColor = true;
             this.btnDeleteMailCalendar.Click += new System.EventHandler(this.btnDeleteMailCalendar_Click);
             // 
+            // btnDeleteZune
+            // 
+            this.btnDeleteZune.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnDeleteZune.Enabled = false;
+            this.btnDeleteZune.Location = new System.Drawing.Point(344, 276);
+            this.btnDeleteZune.Name = "btnDeleteZune";
+            this.btnDeleteZune.Size = new System.Drawing.Size(160, 60);
+            this.btnDeleteZune.TabIndex = 19;
+            this.btnDeleteZune.Text = "Delete Music, Movies and TV";
+            this.btnDeleteZune.UseVisualStyleBackColor = true;
+            this.btnDeleteZune.Click += new System.EventHandler(this.btnDeleteZune_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 372);
+            this.Controls.Add(this.btnDeleteZune);
             this.Controls.Add(this.btnDeleteMailCalendar);
             this.Controls.Add(this.btnDeleteXbox);
             this.Controls.Add(this.btnDeleteWeather);
@@ -329,6 +343,7 @@
         private System.Windows.Forms.Button btnDeleteWeather;
         private System.Windows.Forms.Button btnDeleteXbox;
         private System.Windows.Forms.Button btnDeleteMailCalendar;
+        private System.Windows.Forms.Button btnDeleteZune;
     }
 }
 

@@ -41,6 +41,7 @@ namespace Windows10AppRemover
         private const String Weather = @"Microsoft.BingWeather";
         private const String Xbox = @"Microsoft.XboxApp";
         private const String MailCal = @"microsoft.windowscommunicationsapps";
+        private const String Zune = @"zune";
 
         // Installed app flags
         private bool hasGetStarted = false;
@@ -61,6 +62,7 @@ namespace Windows10AppRemover
         private bool hasWeather = false;
         private bool hasXbox = false;
         private bool hasMailCal = false;
+        private bool hasZune = false;
 
         public MainForm()
         {
@@ -116,6 +118,8 @@ namespace Windows10AppRemover
                 this.btnDeleteXbox.Enabled = true;
             if (hasMailCal)
                 this.btnDeleteMailCalendar.Enabled = true;
+            if (hasZune)
+                this.btnDeleteZune.Enabled = true;
 
             this.lblCurrentOperation.Text = "";
         }
@@ -232,6 +236,12 @@ namespace Windows10AppRemover
             {
                 Debug.WriteLine("Detected " + MailCal + " is installed");
                 this.hasMailCal = true;
+            }
+            // Test for zune app
+            if (appHandler.GetIsAppInstalled(Zune))
+            {
+                Debug.WriteLine("Detected " + Zune + " is installed");
+                this.hasZune = true;
             }
         }
 
@@ -355,6 +365,12 @@ namespace Windows10AppRemover
         private void btnDeleteMailCalendar_Click(object sender, EventArgs e)
         {
             DoDeleteApp(MailCal, sender);
+        }
+
+        // Deletes the zune app
+        private void btnDeleteZune_Click(object sender, EventArgs e)
+        {
+            DoDeleteApp(Zune, sender);
         }
     }
 }
