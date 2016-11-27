@@ -39,6 +39,7 @@ namespace Windows10AppRemover
         private const String Skype = @"Microsoft.SkypeApp";
         private const String VoiceRecorder = @"Microsoft.WindowsSoundRecorder";
         private const String Weather = @"Microsoft.BingWeather";
+        private const String Xbox = @"Microsoft.XboxApp";
 
         // Installed app flags
         private bool hasGetStarted = false;
@@ -57,6 +58,7 @@ namespace Windows10AppRemover
         private bool hasSkype = false;
         private bool hasVoiceRecorder = false;
         private bool hasWeather = false;
+        private bool hasXbox = false;
 
         public MainForm()
         {
@@ -108,6 +110,8 @@ namespace Windows10AppRemover
                 this.btnDeleteVoiceRecorder.Enabled = true;
             if (hasWeather)
                 this.btnDeleteWeather.Enabled = true;
+            if (hasXbox)
+                this.btnDeleteXbox.Enabled = true;
 
             this.lblCurrentOperation.Text = "";
         }
@@ -212,6 +216,12 @@ namespace Windows10AppRemover
             {
                 Debug.WriteLine("Detected " + Weather + " is installed");
                 this.hasWeather = true;
+            }
+            // Test for Xbox app
+            if (appHandler.GetIsAppInstalled(Xbox))
+            {
+                Debug.WriteLine("Detected " + Xbox + " is installed");
+                this.hasXbox = true;
             }
         }
 
@@ -323,6 +333,12 @@ namespace Windows10AppRemover
         private void btnDeleteWeather_Click(object sender, EventArgs e)
         {
             DoDeleteApp(Weather, sender);
+        }
+
+        // Delete Xbox app
+        private void btnDeleteXbox_Click(object sender, EventArgs e)
+        {
+            DoDeleteApp(Xbox, sender);
         }
     }
 }

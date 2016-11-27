@@ -46,6 +46,7 @@
             this.btnDeleteSkype = new System.Windows.Forms.Button();
             this.btnDeleteVoiceRecorder = new System.Windows.Forms.Button();
             this.btnDeleteWeather = new System.Windows.Forms.Button();
+            this.btnDeleteXbox = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,7 +142,7 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblCurrentOperation});
-            this.statusStrip.Location = new System.Drawing.Point(0, 286);
+            this.statusStrip.Location = new System.Drawing.Point(0, 350);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(686, 22);
             this.statusStrip.SizingGrip = false;
@@ -247,11 +248,24 @@
             this.btnDeleteWeather.UseVisualStyleBackColor = true;
             this.btnDeleteWeather.Click += new System.EventHandler(this.btnDeleteWeather_Click);
             // 
+            // btnDeleteXbox
+            // 
+            this.btnDeleteXbox.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnDeleteXbox.Enabled = false;
+            this.btnDeleteXbox.Location = new System.Drawing.Point(12, 276);
+            this.btnDeleteXbox.Name = "btnDeleteXbox";
+            this.btnDeleteXbox.Size = new System.Drawing.Size(160, 60);
+            this.btnDeleteXbox.TabIndex = 17;
+            this.btnDeleteXbox.Text = "Delete Xbox";
+            this.btnDeleteXbox.UseVisualStyleBackColor = true;
+            this.btnDeleteXbox.Click += new System.EventHandler(this.btnDeleteXbox_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 308);
+            this.ClientSize = new System.Drawing.Size(686, 372);
+            this.Controls.Add(this.btnDeleteXbox);
             this.Controls.Add(this.btnDeleteWeather);
             this.Controls.Add(this.btnDeleteVoiceRecorder);
             this.Controls.Add(this.btnDeleteSkype);
@@ -299,6 +313,7 @@
         private System.Windows.Forms.Button btnDeleteSkype;
         private System.Windows.Forms.Button btnDeleteVoiceRecorder;
         private System.Windows.Forms.Button btnDeleteWeather;
+        private System.Windows.Forms.Button btnDeleteXbox;
     }
 }
 
