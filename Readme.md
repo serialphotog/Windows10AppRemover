@@ -1,0 +1,2 @@
+# Windows 10 App Remover
+If you've used Windows 10 you know that it comes loaded with all kinds of "modern" applications that can be rather bothersome and difficult to remove. This app solves that problem by making it easy to remove those pesky apps.
