@@ -141,9 +141,10 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblCurrentOperation});
-            this.statusStrip.Location = new System.Drawing.Point(0, 370);
+            this.statusStrip.Location = new System.Drawing.Point(0, 286);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(686, 22);
+            this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 8;
             this.statusStrip.Text = "statusStrip1";
             // 
@@ -250,7 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 392);
+            this.ClientSize = new System.Drawing.Size(686, 308);
             this.Controls.Add(this.btnDeleteWeather);
             this.Controls.Add(this.btnDeleteVoiceRecorder);
             this.Controls.Add(this.btnDeleteSkype);
@@ -268,6 +269,7 @@
             this.Controls.Add(this.btnDeleteMaps);
             this.Controls.Add(this.btnDeleteFeedbackHub);
             this.Controls.Add(this.btnDeleteGettingStarted);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.Text = "Windows 10 App Remover";
             this.statusStrip.ResumeLayout(false);
