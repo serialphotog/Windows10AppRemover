@@ -24,6 +24,7 @@ namespace Windows10AppRemover
         private const String Builder3D = @"Microsoft.3DBuilder";
         private const String Alarms = @"Microsoft.WindowsAlarms";
         private const String Calculator = @"Microsoft.WindowsCalculator";
+        private const String Camera = @"Microsoft.WindowsCamera";
 
         // Installed app flags
         private bool hasGetStarted = false;
@@ -34,6 +35,7 @@ namespace Windows10AppRemover
         private bool has3dBuilder = false;
         private bool hasAlarms = false;
         private bool hasCalculator = false;
+        private bool hasCamera = false;
 
         public MainForm()
         {
@@ -69,6 +71,8 @@ namespace Windows10AppRemover
                 this.btnDeleteAlarms.Enabled = true;
             if (hasCalculator)
                 this.btnDeleteCalculator.Enabled = true;
+            if (hasCamera)
+                this.btnDeleteCamera.Enabled = true;
 
             this.lblCurrentOperation.Text = "";
         }
@@ -125,6 +129,12 @@ namespace Windows10AppRemover
             {
                 Debug.WriteLine("Detected " + Calculator + " is installed");
                 this.hasCalculator = true;
+            }
+            // Test for camera app
+            if (appHandler.GetIsAppInstalled(Camera))
+            {
+                Debug.WriteLine("Detected " + Camera + " is installed");
+                this.hasCamera = true;
             }
         }
 
@@ -188,6 +198,12 @@ namespace Windows10AppRemover
         private void btnDeleteCalculator_Click(object sender, EventArgs e)
         {
             DoDeleteApp(Calculator, sender);
+        }
+
+        // Deletes the camera app
+        private void btnDeleteCamera_Click(object sender, EventArgs e)
+        {
+            DoDeleteApp(Camera, sender);
         }
     }
 }

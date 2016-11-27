@@ -38,6 +38,7 @@
             this.btnDeleteCalculator = new System.Windows.Forms.Button();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.lblCurrentOperation = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnDeleteCamera = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,11 +146,23 @@
             this.lblCurrentOperation.Size = new System.Drawing.Size(118, 17);
             this.lblCurrentOperation.Text = "toolStripStatusLabel1";
             // 
+            // btnDeleteCamera
+            // 
+            this.btnDeleteCamera.Enabled = false;
+            this.btnDeleteCamera.Location = new System.Drawing.Point(12, 144);
+            this.btnDeleteCamera.Name = "btnDeleteCamera";
+            this.btnDeleteCamera.Size = new System.Drawing.Size(160, 60);
+            this.btnDeleteCamera.TabIndex = 9;
+            this.btnDeleteCamera.Text = "Delete Camera";
+            this.btnDeleteCamera.UseVisualStyleBackColor = true;
+            this.btnDeleteCamera.Click += new System.EventHandler(this.btnDeleteCamera_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 392);
+            this.Controls.Add(this.btnDeleteCamera);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.btnDeleteCalculator);
             this.Controls.Add(this.btnDeleteAlarms);
@@ -180,6 +193,7 @@
         private System.Windows.Forms.Button btnDeleteCalculator;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel lblCurrentOperation;
+        private System.Windows.Forms.Button btnDeleteCamera;
     }
 }
 
