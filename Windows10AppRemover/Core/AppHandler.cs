@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Threading.Tasks;
 using Windows10AppRemover.Core.Util;
 
 namespace Windows10AppRemover.Core

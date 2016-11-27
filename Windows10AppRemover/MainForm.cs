@@ -46,6 +46,9 @@ namespace Windows10AppRemover
         /// </summary>
         private async void SetupUI()
         {
+            // Update status strip
+            this.lblCurrentOperation.Text = "Detecting installed Windows 10 apps...";
+
             // Dertermine which apps are installed
             await Task.Run(() => GetInstalledApps());
 
@@ -66,6 +69,8 @@ namespace Windows10AppRemover
                 this.btnDeleteAlarms.Enabled = true;
             if (hasCalculator)
                 this.btnDeleteCalculator.Enabled = true;
+
+            this.lblCurrentOperation.Text = "";
         }
 
         /// <summary>
@@ -126,55 +131,70 @@ namespace Windows10AppRemover
         // Delete the Getting started app
         private void btnDeleteGettingStarted_Click(object sender, EventArgs e)
         {
+            this.lblCurrentOperation.Text = "Deleting " + GettingStarted;
             Debug.WriteLine("Deleting " + GettingStarted + "...");
             appHandler.DeleteW10App(GettingStarted);
+            this.lblCurrentOperation.Text = "";
         }
 
         // Delete the Feedback hub app
         private void btnDeleteFeedbackHub_Click(object sender, EventArgs e)
         {
+            this.lblCurrentOperation.Text = "Deleting " + FeedbackHub;
             Debug.WriteLine("Deleting " + FeedbackHub + "...");
             appHandler.DeleteW10App(FeedbackHub);
+            this.lblCurrentOperation.Text = "";
         }
            
         // Delete the Maps app
         private void btnDeleteMaps_Click(object sender, EventArgs e)
         {
+            this.lblCurrentOperation.Text = "Deleting " + Maps;
             Debug.WriteLine("Deleting " + Maps + "...");
             appHandler.DeleteW10App(Maps);
+            this.lblCurrentOperation.Text = "";
         }
 
         // Delete the People app
         private void btnDeletePeople_Click(object sender, EventArgs e)
         {
+            this.lblCurrentOperation.Text = "Deleting " + People;
             Debug.WriteLine("Deleting " + People + "...");
             appHandler.DeleteW10App(People);
+            this.lblCurrentOperation.Text = "";
         }
 
         // Delete the Sticky notes app
         private void btnDeleteStickyNotes_Click(object sender, EventArgs e)
         {
+            this.lblCurrentOperation.Text = "Deleting " + StickyNotes;
             Debug.WriteLine("Deleting " + StickyNotes + "...");
             appHandler.DeleteW10App(StickyNotes);
+            this.lblCurrentOperation.Text = "";
         }
 
         // Delete the 3D Builder app
         private void btnDelete3DBuilder_Click(object sender, EventArgs e)
         {
+            this.lblCurrentOperation.Text = "Deleting " + Builder3D;
             Debug.WriteLine("Deleting " + Builder3D + "...");
             appHandler.DeleteW10App(Builder3D);
+            this.lblCurrentOperation.Text = "";
         }
 
         // Delete the Alarms app
         private void btnDeleteAlarms_Click(object sender, EventArgs e)
         {
+            this.lblCurrentOperation.Text = "Deleting " + Alarms;
             Debug.WriteLine("Deleting " + Alarms + "...");
             appHandler.DeleteW10App(Alarms);
+            this.lblCurrentOperation.Text = "";
         }
 
         // Delete the Calculator app
         private void btnDeleteCalculator_Click(object sender, EventArgs e)
         {
+            this.lblCurrentOperation.Text = "Deleting " + Calculator;
             Debug.WriteLine("Deleting " + Calculator + "...");
             appHandler.DeleteW10App(Calculator);
         }

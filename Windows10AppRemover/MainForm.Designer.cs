@@ -36,6 +36,9 @@
             this.btnDelete3DBuilder = new System.Windows.Forms.Button();
             this.btnDeleteAlarms = new System.Windows.Forms.Button();
             this.btnDeleteCalculator = new System.Windows.Forms.Button();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.lblCurrentOperation = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnDeleteGettingStarted
@@ -126,11 +129,28 @@
             this.btnDeleteCalculator.UseVisualStyleBackColor = true;
             this.btnDeleteCalculator.Click += new System.EventHandler(this.btnDeleteCalculator_Click);
             // 
+            // statusStrip
+            // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblCurrentOperation});
+            this.statusStrip.Location = new System.Drawing.Point(0, 370);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(686, 22);
+            this.statusStrip.TabIndex = 8;
+            this.statusStrip.Text = "statusStrip1";
+            // 
+            // lblCurrentOperation
+            // 
+            this.lblCurrentOperation.Name = "lblCurrentOperation";
+            this.lblCurrentOperation.Size = new System.Drawing.Size(118, 17);
+            this.lblCurrentOperation.Text = "toolStripStatusLabel1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 392);
+            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.btnDeleteCalculator);
             this.Controls.Add(this.btnDeleteAlarms);
             this.Controls.Add(this.btnDelete3DBuilder);
@@ -141,7 +161,10 @@
             this.Controls.Add(this.btnDeleteGettingStarted);
             this.Name = "MainForm";
             this.Text = "Windows 10 App Remover";
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -155,6 +178,8 @@
         private System.Windows.Forms.Button btnDelete3DBuilder;
         private System.Windows.Forms.Button btnDeleteAlarms;
         private System.Windows.Forms.Button btnDeleteCalculator;
+        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel lblCurrentOperation;
     }
 }
 

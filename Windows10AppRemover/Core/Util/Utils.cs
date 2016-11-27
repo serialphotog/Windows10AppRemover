@@ -41,6 +41,7 @@ namespace Windows10AppRemover.Core.Util
                 }
                 process.WaitForExit();
                 //Debug.WriteLine("Process: " + name + " with " + args + "\n Output: " + line);
+                process.WaitForExit();
                 return line;
             }
             catch (Exception ex)
