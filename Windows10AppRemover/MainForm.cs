@@ -132,60 +132,62 @@ namespace Windows10AppRemover
         /// Initiates the deletion of an app
         /// </summary>
         /// <param name="app">The app to delete</param>
-        private void DoDeleteApp(String app)
+        private void DoDeleteApp(String app, object sender)
         {
             this.lblCurrentOperation.Text = "Deleting " + app;
             Debug.WriteLine("Deleting " + app);
             appHandler.DeleteW10App(app);
+            Button btn = (Button)sender;
+            btn.Enabled = false;
             this.lblCurrentOperation.Text = "";
         }
 
         // Delete the Getting started app
         private void btnDeleteGettingStarted_Click(object sender, EventArgs e)
         {
-            DoDeleteApp(GettingStarted);
+            DoDeleteApp(GettingStarted, sender);
         }
 
         // Delete the Feedback hub app
         private void btnDeleteFeedbackHub_Click(object sender, EventArgs e)
         {
-            DoDeleteApp(FeedbackHub);
+            DoDeleteApp(FeedbackHub, sender);
         }
            
         // Delete the Maps app
         private void btnDeleteMaps_Click(object sender, EventArgs e)
         {
-            DoDeleteApp(Maps);
+            DoDeleteApp(Maps, sender);
         }
 
         // Delete the People app
         private void btnDeletePeople_Click(object sender, EventArgs e)
         {
-            DoDeleteApp(People);
+            DoDeleteApp(People, sender);
         }
 
         // Delete the Sticky notes app
         private void btnDeleteStickyNotes_Click(object sender, EventArgs e)
         {
-            DoDeleteApp(StickyNotes);
+            DoDeleteApp(StickyNotes, sender);
         }
 
         // Delete the 3D Builder app
         private void btnDelete3DBuilder_Click(object sender, EventArgs e)
         {
-            DoDeleteApp(Builder3D);
+            DoDeleteApp(Builder3D, sender);
         }
 
         // Delete the Alarms app
         private void btnDeleteAlarms_Click(object sender, EventArgs e)
         {
-            DoDeleteApp(Alarms);
+            DoDeleteApp(Alarms, sender);
         }
 
         // Delete the Calculator app
         private void btnDeleteCalculator_Click(object sender, EventArgs e)
         {
-            DoDeleteApp(Calculator);
+            DoDeleteApp(Calculator, sender);
         }
     }
 }
