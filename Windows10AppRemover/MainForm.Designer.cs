@@ -188,7 +188,7 @@
             this.btnDeleteMessaging.TabIndex = 11;
             this.btnDeleteMessaging.Text = "Delete Messaging";
             this.btnDeleteMessaging.UseVisualStyleBackColor = true;
-            this.btnDeleteMessaging.Click += new System.EventHandler(this.btnDeleteGrooveMusic_Click);
+            this.btnDeleteMessaging.Click += new System.EventHandler(this.btnDeleteMessaging_Click);
             // 
             // btnDeleteNews
             // 

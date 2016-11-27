@@ -320,7 +320,7 @@ namespace Windows10AppRemover
         }
 
         // Delete Messaging app
-        private void btnDeleteGrooveMusic_Click(object sender, EventArgs e)
+        private void btnDeleteMessaging_Click(object sender, EventArgs e)
         {
             DoDeleteApp(Messaging, sender);
         }
