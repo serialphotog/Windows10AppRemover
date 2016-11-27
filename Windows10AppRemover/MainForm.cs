@@ -27,6 +27,7 @@ namespace Windows10AppRemover
         private const String Camera = @"Microsoft.WindowsCamera";
         private const String ContactSupport = @"Microsoft.ContactSupport";
         private const String Messaging = @"Microsoft.Messaging";
+        private const String News = @"Microsoft.BingNews";
 
         // Installed app flags
         private bool hasGetStarted = false;
@@ -40,6 +41,7 @@ namespace Windows10AppRemover
         private bool hasCamera = false;
         private bool hasContactSupport = false;
         private bool hasMessaging = false;
+        private bool hasNews = false;
 
         public MainForm()
         {
@@ -81,6 +83,8 @@ namespace Windows10AppRemover
                 this.btnDeleteContactSupport.Enabled = true;
             if (hasMessaging)
                 this.btnDeleteMessaging.Enabled = true;
+            if (hasNews)
+                this.btnDeleteNews.Enabled = true;
 
             this.lblCurrentOperation.Text = "";
         }
@@ -155,6 +159,12 @@ namespace Windows10AppRemover
             {
                 Debug.WriteLine("Detected " + Messaging + " is installed");
                 this.hasMessaging = true;
+            }
+            // Test for News app
+            if (appHandler.GetIsAppInstalled(News))
+            {
+                Debug.WriteLine("Detected " + News + " is installed");
+                this.hasNews = true;
             }
         }
 
@@ -236,6 +246,12 @@ namespace Windows10AppRemover
         private void btnDeleteGrooveMusic_Click(object sender, EventArgs e)
         {
             DoDeleteApp(Messaging, sender);
+        }
+
+        // Delete news app
+        private void btnDeleteNews_Click(object sender, EventArgs e)
+        {
+            DoDeleteApp(News, sender);
         }
     }
 }

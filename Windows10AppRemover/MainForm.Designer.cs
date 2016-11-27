@@ -41,6 +41,7 @@
             this.btnDeleteCamera = new System.Windows.Forms.Button();
             this.btnDeleteContactSupport = new System.Windows.Forms.Button();
             this.btnDeleteMessaging = new System.Windows.Forms.Button();
+            this.btnDeleteNews = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -181,11 +182,24 @@
             this.btnDeleteMessaging.UseVisualStyleBackColor = true;
             this.btnDeleteMessaging.Click += new System.EventHandler(this.btnDeleteGrooveMusic_Click);
             // 
+            // btnDeleteNews
+            // 
+            this.btnDeleteNews.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnDeleteNews.Enabled = false;
+            this.btnDeleteNews.Location = new System.Drawing.Point(510, 144);
+            this.btnDeleteNews.Name = "btnDeleteNews";
+            this.btnDeleteNews.Size = new System.Drawing.Size(160, 60);
+            this.btnDeleteNews.TabIndex = 12;
+            this.btnDeleteNews.Text = "Delete News";
+            this.btnDeleteNews.UseVisualStyleBackColor = true;
+            this.btnDeleteNews.Click += new System.EventHandler(this.btnDeleteNews_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 392);
+            this.Controls.Add(this.btnDeleteNews);
             this.Controls.Add(this.btnDeleteMessaging);
             this.Controls.Add(this.btnDeleteContactSupport);
             this.Controls.Add(this.btnDeleteCamera);
@@ -222,6 +236,7 @@
         private System.Windows.Forms.Button btnDeleteCamera;
         private System.Windows.Forms.Button btnDeleteContactSupport;
         private System.Windows.Forms.Button btnDeleteMessaging;
+        private System.Windows.Forms.Button btnDeleteNews;
     }
 }
 
