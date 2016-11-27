@@ -32,7 +32,7 @@ namespace Windows10AppRemover
         private const String Alarms = @"Microsoft.WindowsAlarms";
         private const String Calculator = @"Microsoft.WindowsCalculator";
         private const String Camera = @"Microsoft.WindowsCamera";
-        private const String ContactSupport = @"Microsoft.ContactSupport";
+        private const String ContactSupport = @"Windows.ContactSupport";
         private const String Messaging = @"Microsoft.Messaging";
         private const String News = @"Microsoft.BingNews";
         private const String OneNote = @"Microsoft.Office.OneNote";
@@ -175,7 +175,7 @@ namespace Windows10AppRemover
             if (appHandler.GetIsAppInstalled(ContactSupport))
             {
                 Debug.WriteLine("Detected " + ContactSupport + " is installed");
-                this.hasCamera = true;
+                this.hasContactSupport = true;
             }
             // Test for Messaging app
             if (appHandler.GetIsAppInstalled(Messaging))
