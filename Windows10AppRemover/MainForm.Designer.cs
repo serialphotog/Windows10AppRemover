@@ -49,6 +49,7 @@
             this.btnDeleteXbox = new System.Windows.Forms.Button();
             this.btnDeleteMailCalendar = new System.Windows.Forms.Button();
             this.btnDeleteZune = new System.Windows.Forms.Button();
+            this.btnDeleteSolitaire = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -286,11 +287,24 @@
             this.btnDeleteZune.UseVisualStyleBackColor = true;
             this.btnDeleteZune.Click += new System.EventHandler(this.btnDeleteZune_Click);
             // 
+            // btnDeleteSolitaire
+            // 
+            this.btnDeleteSolitaire.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnDeleteSolitaire.Enabled = false;
+            this.btnDeleteSolitaire.Location = new System.Drawing.Point(510, 276);
+            this.btnDeleteSolitaire.Name = "btnDeleteSolitaire";
+            this.btnDeleteSolitaire.Size = new System.Drawing.Size(160, 60);
+            this.btnDeleteSolitaire.TabIndex = 20;
+            this.btnDeleteSolitaire.Text = "Delete Solitaire Collection";
+            this.btnDeleteSolitaire.UseVisualStyleBackColor = true;
+            this.btnDeleteSolitaire.Click += new System.EventHandler(this.btnDeleteSolitaire_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 372);
+            this.Controls.Add(this.btnDeleteSolitaire);
             this.Controls.Add(this.btnDeleteZune);
             this.Controls.Add(this.btnDeleteMailCalendar);
             this.Controls.Add(this.btnDeleteXbox);
@@ -344,6 +358,7 @@
         private System.Windows.Forms.Button btnDeleteXbox;
         private System.Windows.Forms.Button btnDeleteMailCalendar;
         private System.Windows.Forms.Button btnDeleteZune;
+        private System.Windows.Forms.Button btnDeleteSolitaire;
     }
 }
 

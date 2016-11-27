@@ -42,6 +42,7 @@ namespace Windows10AppRemover
         private const String Xbox = @"Microsoft.XboxApp";
         private const String MailCal = @"microsoft.windowscommunicationsapps";
         private const String Zune = @"zune";
+        private const String Solitaire = @"Microsoft.MicrosoftSolitaireCollection";
 
         // Installed app flags
         private bool hasGetStarted = false;
@@ -63,6 +64,7 @@ namespace Windows10AppRemover
         private bool hasXbox = false;
         private bool hasMailCal = false;
         private bool hasZune = false;
+        private bool hasSolitaire = false;
 
         public MainForm()
         {
@@ -120,6 +122,8 @@ namespace Windows10AppRemover
                 this.btnDeleteMailCalendar.Enabled = true;
             if (hasZune)
                 this.btnDeleteZune.Enabled = true;
+            if (hasSolitaire)
+                this.btnDeleteSolitaire.Enabled = true;
 
             this.lblCurrentOperation.Text = "";
         }
@@ -242,6 +246,12 @@ namespace Windows10AppRemover
             {
                 Debug.WriteLine("Detected " + Zune + " is installed");
                 this.hasZune = true;
+            }
+            // Test for solitaire app
+            if (appHandler.GetIsAppInstalled(Solitaire))
+            {
+                Debug.WriteLine("Detected " + Solitaire + " is installed");
+                this.hasSolitaire = true;
             }
         }
 
@@ -371,6 +381,12 @@ namespace Windows10AppRemover
         private void btnDeleteZune_Click(object sender, EventArgs e)
         {
             DoDeleteApp(Zune, sender);
+        }
+
+        // Deletes the solitaire app
+        private void btnDeleteSolitaire_Click(object sender, EventArgs e)
+        {
+            DoDeleteApp(Solitaire, sender);
         }
     }
 }
