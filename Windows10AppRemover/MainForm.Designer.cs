@@ -39,6 +39,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.lblCurrentOperation = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnDeleteCamera = new System.Windows.Forms.Button();
+            this.btnDeleteContactSupport = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,11 +158,23 @@
             this.btnDeleteCamera.UseVisualStyleBackColor = true;
             this.btnDeleteCamera.Click += new System.EventHandler(this.btnDeleteCamera_Click);
             // 
+            // btnDeleteContactSupport
+            // 
+            this.btnDeleteContactSupport.Enabled = false;
+            this.btnDeleteContactSupport.Location = new System.Drawing.Point(178, 144);
+            this.btnDeleteContactSupport.Name = "btnDeleteContactSupport";
+            this.btnDeleteContactSupport.Size = new System.Drawing.Size(160, 60);
+            this.btnDeleteContactSupport.TabIndex = 10;
+            this.btnDeleteContactSupport.Text = "Delete Contact Support";
+            this.btnDeleteContactSupport.UseVisualStyleBackColor = true;
+            this.btnDeleteContactSupport.Click += new System.EventHandler(this.btnDeleteContactSupport_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 392);
+            this.Controls.Add(this.btnDeleteContactSupport);
             this.Controls.Add(this.btnDeleteCamera);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.btnDeleteCalculator);
@@ -194,6 +207,7 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel lblCurrentOperation;
         private System.Windows.Forms.Button btnDeleteCamera;
+        private System.Windows.Forms.Button btnDeleteContactSupport;
     }
 }
 

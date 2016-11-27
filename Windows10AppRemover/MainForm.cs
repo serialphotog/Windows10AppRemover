@@ -25,6 +25,7 @@ namespace Windows10AppRemover
         private const String Alarms = @"Microsoft.WindowsAlarms";
         private const String Calculator = @"Microsoft.WindowsCalculator";
         private const String Camera = @"Microsoft.WindowsCamera";
+        private const String ContactSupport = @"Microsoft.ContactSupport";
 
         // Installed app flags
         private bool hasGetStarted = false;
@@ -36,6 +37,7 @@ namespace Windows10AppRemover
         private bool hasAlarms = false;
         private bool hasCalculator = false;
         private bool hasCamera = false;
+        private bool hasContactSupport = false;
 
         public MainForm()
         {
@@ -73,6 +75,8 @@ namespace Windows10AppRemover
                 this.btnDeleteCalculator.Enabled = true;
             if (hasCamera)
                 this.btnDeleteCamera.Enabled = true;
+            if (hasContactSupport)
+                this.btnDeleteContactSupport.Enabled = true;
 
             this.lblCurrentOperation.Text = "";
         }
@@ -134,6 +138,12 @@ namespace Windows10AppRemover
             if (appHandler.GetIsAppInstalled(Camera))
             {
                 Debug.WriteLine("Detected " + Camera + " is installed");
+                this.hasCamera = true;
+            }
+            // Test for Contact Support app
+            if (appHandler.GetIsAppInstalled(ContactSupport))
+            {
+                Debug.WriteLine("Detected " + ContactSupport + " is installed");
                 this.hasCamera = true;
             }
         }
@@ -204,6 +214,12 @@ namespace Windows10AppRemover
         private void btnDeleteCamera_Click(object sender, EventArgs e)
         {
             DoDeleteApp(Camera, sender);
+        }
+
+        // Delete Contact Support app
+        private void btnDeleteContactSupport_Click(object sender, EventArgs e)
+        {
+            DoDeleteApp(ContactSupport, sender);
         }
     }
 }
