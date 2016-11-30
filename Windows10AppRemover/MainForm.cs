@@ -23,6 +23,9 @@ namespace Windows10AppRemover
         /// </summary>
         private AppHandler appHandler = new AppHandler();
 
+        /// <summary>
+        /// Contains all our app IDs
+        /// </summary>
         private String[] AppIDs = new String[] 
         {
             @"Microsoft.Getstarted",
@@ -92,6 +95,11 @@ namespace Windows10AppRemover
             this.lblCurrentOperation.Text = "";
         }
 
+        /// <summary>
+        /// Finds a control by its tag
+        /// </summary>
+        /// <param name="tag">The tag to search for</param>
+        /// <returns>Control - The control with the given tag, else returns null</returns>
         private Control FindControl(String tag)
         {
             foreach (Control control in this.Controls)
@@ -124,6 +132,10 @@ namespace Windows10AppRemover
             }
         }
 
+        /// <summary>
+        /// Prints detected app debug string
+        /// </summary>
+        /// <param name="app">App id that was detected</param>
         private void PrintDetectedApp(String app)
         {
             Debug.WriteLine("Detected " + app + " is installed.");
@@ -143,6 +155,11 @@ namespace Windows10AppRemover
             this.lblCurrentOperation.Text = "";
         }
 
+        /// <summary>
+        /// Handles button clicks for the delete app buttons
+        /// </summary>
+        /// <param name="sender">sender</param>
+        /// <param name="args">args</param>
         private void DeleteButton_Click(object sender, EventArgs args)
         {
             Button btn = (Button)sender;
