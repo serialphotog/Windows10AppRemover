@@ -255,6 +255,11 @@ namespace Windows10AppRemover
             }
         }
 
+        private void PrintDetectedApp(String app)
+        {
+            Debug.WriteLine("Detected " + app + " is installed.");
+        }
+
         /// <summary>
         /// Initiates the deletion of an app
         /// </summary>
@@ -269,124 +274,71 @@ namespace Windows10AppRemover
             this.lblCurrentOperation.Text = "";
         }
 
-        // Delete the Getting started app
-        private void btnDeleteGettingStarted_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs args)
         {
-            DoDeleteApp(GettingStarted, sender);
-        }
-
-        // Delete the Feedback hub app
-        private void btnDeleteFeedbackHub_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(FeedbackHub, sender);
-        }
-           
-        // Delete the Maps app
-        private void btnDeleteMaps_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(Maps, sender);
-        }
-
-        // Delete the People app
-        private void btnDeletePeople_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(People, sender);
-        }
-
-        // Delete the Sticky notes app
-        private void btnDeleteStickyNotes_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(StickyNotes, sender);
-        }
-
-        // Delete the 3D Builder app
-        private void btnDelete3DBuilder_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(Builder3D, sender);
-        }
-
-        // Delete the Alarms app
-        private void btnDeleteAlarms_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(Alarms, sender);
-        }
-
-        // Delete the Calculator app
-        private void btnDeleteCalculator_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(Calculator, sender);
-        }
-
-        // Deletes the camera app
-        private void btnDeleteCamera_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(Camera, sender);
-        }
-
-        // Delete Contact Support app
-        private void btnDeleteContactSupport_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(ContactSupport, sender);
-        }
-
-        // Delete Messaging app
-        private void btnDeleteMessaging_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(Messaging, sender);
-        }
-
-        // Delete news app
-        private void btnDeleteNews_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(News, sender);
-        }
-
-        // Delete OneNote app
-        private void btnDeleteOneNote_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(OneNote, sender);
-        }
-
-        // Delete Skype app
-        private void btnDeleteSkype_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(Skype, sender);
-        }
-
-        // Delete Voice Recorder app
-        private void btnDeleteVoiceRecorder_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(VoiceRecorder, sender);
-        }
-
-        // Delete Weather app
-        private void btnDeleteWeather_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(Weather, sender);
-        }
-
-        // Delete Xbox app
-        private void btnDeleteXbox_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(Xbox, sender);
-        }
-
-        // Delete mail and calendar apps
-        private void btnDeleteMailCalendar_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(MailCal, sender);
-        }
-
-        // Deletes the zune app
-        private void btnDeleteZune_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(Zune, sender);
-        }
-
-        // Deletes the solitaire app
-        private void btnDeleteSolitaire_Click(object sender, EventArgs e)
-        {
-            DoDeleteApp(Solitaire, sender);
+            Button btn = (Button)sender;
+            switch ((String)btn.Tag) {
+                case "GettingStarted":
+                    DoDeleteApp(GettingStarted, sender);
+                    break;
+                case "FeedbackHub":
+                    DoDeleteApp(FeedbackHub, sender);
+                    break;
+                case "Maps":
+                    DoDeleteApp(Maps, sender);
+                    break;
+                case "People":
+                    DoDeleteApp(People, sender);
+                    break;
+                case "StickyNotes":
+                    DoDeleteApp(StickyNotes, sender);
+                    break;
+                case "3DBuilder":
+                    DoDeleteApp(Builder3D, sender);
+                    break;
+                case "AlarmsAndClock":
+                    DoDeleteApp(Alarms, sender);
+                    break;
+                case "Calculator":
+                    DoDeleteApp(Calculator, sender);
+                    break;
+                case "Camera":
+                    DoDeleteApp(Camera, sender);
+                    break;
+                case "ContactSupport":
+                    DoDeleteApp(ContactSupport, sender);
+                    break;
+                case "Messaging":
+                    DoDeleteApp(Messaging, sender);
+                    break;
+                case "News":
+                    DoDeleteApp(News, sender);
+                    break;
+                case "OneNote":
+                    DoDeleteApp(OneNote, sender);
+                    break;
+                case "Skype":
+                    DoDeleteApp(Skype, sender);
+                    break;
+                case "VoiceRecorder":
+                    DoDeleteApp(VoiceRecorder, sender);
+                    break;
+                case "Weather":
+                    DoDeleteApp(Weather, sender);
+                    break;
+                case "Xbox":
+                    DoDeleteApp(Xbox, sender);
+                    break;
+                case "MailAndCalendar":
+                    DoDeleteApp(MailCal, sender);
+                    break;
+                case "Zune":
+                    DoDeleteApp(Zune, sender);
+                    break;
+                case "Solitaire":
+                    DoDeleteApp(Solitaire, sender);
+                    break;
+            }
         }
     }
 }
