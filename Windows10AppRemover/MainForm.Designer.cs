@@ -60,7 +60,7 @@
             this.btnDeleteGettingStarted.Name = "btnDeleteGettingStarted";
             this.btnDeleteGettingStarted.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteGettingStarted.TabIndex = 0;
-            this.btnDeleteGettingStarted.Tag = "GettingStarted";
+            this.btnDeleteGettingStarted.Tag = "0";
             this.btnDeleteGettingStarted.Text = "Delete Getting Started";
             this.btnDeleteGettingStarted.UseVisualStyleBackColor = true;
             this.btnDeleteGettingStarted.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -72,7 +72,7 @@
             this.btnDeleteFeedbackHub.Name = "btnDeleteFeedbackHub";
             this.btnDeleteFeedbackHub.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteFeedbackHub.TabIndex = 1;
-            this.btnDeleteFeedbackHub.Tag = "FeedbackHub";
+            this.btnDeleteFeedbackHub.Tag = "1";
             this.btnDeleteFeedbackHub.Text = "Delete Feedback Hub";
             this.btnDeleteFeedbackHub.UseVisualStyleBackColor = true;
             this.btnDeleteFeedbackHub.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -84,7 +84,7 @@
             this.btnDeleteMaps.Name = "btnDeleteMaps";
             this.btnDeleteMaps.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteMaps.TabIndex = 2;
-            this.btnDeleteMaps.Tag = "Maps";
+            this.btnDeleteMaps.Tag = "2";
             this.btnDeleteMaps.Text = "Delete Maps";
             this.btnDeleteMaps.UseVisualStyleBackColor = true;
             this.btnDeleteMaps.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -96,7 +96,7 @@
             this.btnDeletePeople.Name = "btnDeletePeople";
             this.btnDeletePeople.Size = new System.Drawing.Size(160, 60);
             this.btnDeletePeople.TabIndex = 3;
-            this.btnDeletePeople.Tag = "People";
+            this.btnDeletePeople.Tag = "3";
             this.btnDeletePeople.Text = "Delete People";
             this.btnDeletePeople.UseVisualStyleBackColor = true;
             this.btnDeletePeople.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -108,7 +108,7 @@
             this.btnDeleteStickyNotes.Name = "btnDeleteStickyNotes";
             this.btnDeleteStickyNotes.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteStickyNotes.TabIndex = 4;
-            this.btnDeleteStickyNotes.Tag = "StickyNotes";
+            this.btnDeleteStickyNotes.Tag = "4";
             this.btnDeleteStickyNotes.Text = "Delete Sticky Notes";
             this.btnDeleteStickyNotes.UseVisualStyleBackColor = true;
             this.btnDeleteStickyNotes.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -120,7 +120,7 @@
             this.btnDelete3DBuilder.Name = "btnDelete3DBuilder";
             this.btnDelete3DBuilder.Size = new System.Drawing.Size(160, 60);
             this.btnDelete3DBuilder.TabIndex = 5;
-            this.btnDelete3DBuilder.Tag = "3DBuilder";
+            this.btnDelete3DBuilder.Tag = "5";
             this.btnDelete3DBuilder.Text = "Delete 3D Builder";
             this.btnDelete3DBuilder.UseVisualStyleBackColor = true;
             this.btnDelete3DBuilder.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -132,7 +132,7 @@
             this.btnDeleteAlarms.Name = "btnDeleteAlarms";
             this.btnDeleteAlarms.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteAlarms.TabIndex = 6;
-            this.btnDeleteAlarms.Tag = "AlarmsAndClock";
+            this.btnDeleteAlarms.Tag = "6";
             this.btnDeleteAlarms.Text = "Delete Alarms and Clock";
             this.btnDeleteAlarms.UseVisualStyleBackColor = true;
             this.btnDeleteAlarms.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -144,7 +144,7 @@
             this.btnDeleteCalculator.Name = "btnDeleteCalculator";
             this.btnDeleteCalculator.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteCalculator.TabIndex = 7;
-            this.btnDeleteCalculator.Tag = "Calculator";
+            this.btnDeleteCalculator.Tag = "7";
             this.btnDeleteCalculator.Text = "Delete Calculator";
             this.btnDeleteCalculator.UseVisualStyleBackColor = true;
             this.btnDeleteCalculator.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -173,7 +173,7 @@
             this.btnDeleteCamera.Name = "btnDeleteCamera";
             this.btnDeleteCamera.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteCamera.TabIndex = 9;
-            this.btnDeleteCamera.Tag = "Camera";
+            this.btnDeleteCamera.Tag = "8";
             this.btnDeleteCamera.Text = "Delete Camera";
             this.btnDeleteCamera.UseVisualStyleBackColor = true;
             this.btnDeleteCamera.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -185,7 +185,7 @@
             this.btnDeleteContactSupport.Name = "btnDeleteContactSupport";
             this.btnDeleteContactSupport.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteContactSupport.TabIndex = 10;
-            this.btnDeleteContactSupport.Tag = "ContactSupport";
+            this.btnDeleteContactSupport.Tag = "9";
             this.btnDeleteContactSupport.Text = "Delete Contact Support";
             this.btnDeleteContactSupport.UseVisualStyleBackColor = true;
             this.btnDeleteContactSupport.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -197,7 +197,7 @@
             this.btnDeleteMessaging.Name = "btnDeleteMessaging";
             this.btnDeleteMessaging.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteMessaging.TabIndex = 11;
-            this.btnDeleteMessaging.Tag = "Messaging";
+            this.btnDeleteMessaging.Tag = "10";
             this.btnDeleteMessaging.Text = "Delete Messaging";
             this.btnDeleteMessaging.UseVisualStyleBackColor = true;
             this.btnDeleteMessaging.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -210,7 +210,7 @@
             this.btnDeleteNews.Name = "btnDeleteNews";
             this.btnDeleteNews.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteNews.TabIndex = 12;
-            this.btnDeleteNews.Tag = "News";
+            this.btnDeleteNews.Tag = "11";
             this.btnDeleteNews.Text = "Delete News";
             this.btnDeleteNews.UseVisualStyleBackColor = true;
             this.btnDeleteNews.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -223,7 +223,7 @@
             this.btnDeleteOneNote.Name = "btnDeleteOneNote";
             this.btnDeleteOneNote.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteOneNote.TabIndex = 13;
-            this.btnDeleteOneNote.Tag = "OneNote";
+            this.btnDeleteOneNote.Tag = "12";
             this.btnDeleteOneNote.Text = "Delete OneNote";
             this.btnDeleteOneNote.UseVisualStyleBackColor = true;
             this.btnDeleteOneNote.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -236,7 +236,7 @@
             this.btnDeleteSkype.Name = "btnDeleteSkype";
             this.btnDeleteSkype.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteSkype.TabIndex = 14;
-            this.btnDeleteSkype.Tag = "Skype";
+            this.btnDeleteSkype.Tag = "13";
             this.btnDeleteSkype.Text = "Delete Skype";
             this.btnDeleteSkype.UseVisualStyleBackColor = true;
             this.btnDeleteSkype.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -249,7 +249,7 @@
             this.btnDeleteVoiceRecorder.Name = "btnDeleteVoiceRecorder";
             this.btnDeleteVoiceRecorder.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteVoiceRecorder.TabIndex = 15;
-            this.btnDeleteVoiceRecorder.Tag = "VoiceRecorder";
+            this.btnDeleteVoiceRecorder.Tag = "14";
             this.btnDeleteVoiceRecorder.Text = "Delete Voice Recorder";
             this.btnDeleteVoiceRecorder.UseVisualStyleBackColor = true;
             this.btnDeleteVoiceRecorder.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -262,7 +262,7 @@
             this.btnDeleteWeather.Name = "btnDeleteWeather";
             this.btnDeleteWeather.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteWeather.TabIndex = 16;
-            this.btnDeleteWeather.Tag = "Weather";
+            this.btnDeleteWeather.Tag = "15";
             this.btnDeleteWeather.Text = "Delete Weather";
             this.btnDeleteWeather.UseVisualStyleBackColor = true;
             this.btnDeleteWeather.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -275,7 +275,7 @@
             this.btnDeleteXbox.Name = "btnDeleteXbox";
             this.btnDeleteXbox.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteXbox.TabIndex = 17;
-            this.btnDeleteXbox.Tag = "Xbox";
+            this.btnDeleteXbox.Tag = "16";
             this.btnDeleteXbox.Text = "Delete Xbox";
             this.btnDeleteXbox.UseVisualStyleBackColor = true;
             this.btnDeleteXbox.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -288,7 +288,7 @@
             this.btnDeleteMailCalendar.Name = "btnDeleteMailCalendar";
             this.btnDeleteMailCalendar.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteMailCalendar.TabIndex = 18;
-            this.btnDeleteMailCalendar.Tag = "MailAndCalendar";
+            this.btnDeleteMailCalendar.Tag = "17";
             this.btnDeleteMailCalendar.Text = "Delete Mail and Calendar";
             this.btnDeleteMailCalendar.UseVisualStyleBackColor = true;
             this.btnDeleteMailCalendar.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -301,7 +301,7 @@
             this.btnDeleteZune.Name = "btnDeleteZune";
             this.btnDeleteZune.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteZune.TabIndex = 19;
-            this.btnDeleteZune.Tag = "Zune";
+            this.btnDeleteZune.Tag = "18";
             this.btnDeleteZune.Text = "Delete Music, Movies and TV";
             this.btnDeleteZune.UseVisualStyleBackColor = true;
             this.btnDeleteZune.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -314,7 +314,7 @@
             this.btnDeleteSolitaire.Name = "btnDeleteSolitaire";
             this.btnDeleteSolitaire.Size = new System.Drawing.Size(160, 60);
             this.btnDeleteSolitaire.TabIndex = 20;
-            this.btnDeleteSolitaire.Tag = "Solitaire";
+            this.btnDeleteSolitaire.Tag = "19";
             this.btnDeleteSolitaire.Text = "Delete Solitaire Collection";
             this.btnDeleteSolitaire.UseVisualStyleBackColor = true;
             this.btnDeleteSolitaire.Click += new System.EventHandler(this.DeleteButton_Click);
