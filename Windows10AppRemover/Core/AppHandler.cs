@@ -35,10 +35,7 @@ namespace Windows10AppRemover.Core
         /// <param name="app"></param>
         public void DeleteW10App(String app)
         {
-            if (GetIsAppInstalled(app))
-            {
-                Utils.StartProcess("powershell", $"-command \"Get-AppxPackage *{app}* | Remove-AppxPackage\"");
-            }
+            Utils.StartProcess("powershell", $"-command \"Get-AppxPackage *{app}* | Remove-AppxPackage\"");
         }
 
     }
